@@ -42,8 +42,21 @@ fclose($handle);
 echo $contents; } ?>
 
 <!-- end of project description -->
+<p>orthogonalsplinebasis releases are available from <a href="http://cran.r-project.org/web/packages/orthogonalsplinebasis/index.html">CRAN</a> and can be installed by running <code>install.package("orthongalsplinebasis")</code> from inside a running R session.
 
-<p> No content added. </p>
+<p> The standard basis functions for B splines are shown in the plot</p>
+
+<p><img src="images/base.png" alt="Standard Basis Functions"/><br/>The standard basis functions for cubic splines.</p>
+
+<p>Sometimes it is desireable to work with the basis after they have been transformed to be orthogonl</p>
+
+<p><img src="images/obase.png" alt="Orthogonal Basis Functions"/><br/>The basis functions after being transformed to be orthogonal.</p>
+
+<p>Through creative matrix representations this orthogonalizing transformation can be computed very fast without any calculations more that matrix multiplication, meaning that calculations are acurate to machine precision.  Other caculus computation are similarly just as easy such as derivatives and integrals.<p> 
+
+<p><img src="images/ibase.png" alt="Integrated Orthogonal Basis Functions"/><br/>The integrated orthogonal basis functions.</p>
+
+<p><a href="plots.R">The script for generating these functions</a></p>
 
 <p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 

@@ -1,0 +1,16 @@
+library(orthogonalsplinebasis)
+knots<-expand.knots(0:5*2)
+base<-SplineBasis(knots)
+png('images/base.png')
+plot(base,lwd=2)
+dev.off()
+
+obase<-OBasis(knots)
+png('images/obase.png')
+plot(obase,lwd=2,main="Orthogonal Basis Functions")
+dev.off()
+
+ibase<-integrate(obase)
+png('images/ibase.png')
+plot(ibase,lwd=2, main="Integrated Basis Functions")
+dev.off()
