@@ -1,5 +1,4 @@
 #!/usr/bin/env  ruby
-require 'win32/registry'
 
 system "taskkill /F /IM rgui.exe /T"
 
@@ -16,7 +15,7 @@ else
 	raise "Bad description file"
 end
 
-p pkgname + '_' + pkgversion
+p pkgname + '_' + pkgversion + '.tar.gz'
 
 system "Rcmd build pkg"
 system "Rcmd INSTALL --build #{pkgname + '_' + pkgversion + '.tar.gz'}"
